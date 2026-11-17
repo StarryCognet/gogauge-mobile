@@ -1,0 +1,28 @@
+GoGauge Mobile
+==============
+
+This project is an Android/Flutter port of GoGauge:
+
+  GoGauge (opencode-go-gauge)
+  Copyright (c) 2026 GoGauge (yphyphyph)
+  https://github.com/yphyphyph/opencode-go-gauge
+  Licensed under the MIT License.
+
+It is a community-maintained port and is not an official mobile release from
+the upstream author. The upstream Windows desktop application is a separate
+project and is not included in this repository.
+
+Changes made for the Android port:
+- UI rewritten with Flutter/Dart (bottom navigation, mobile layouts, charts,
+  light/dark themes, Chinese/English UI).
+- opencode.ai console API client, quota parsing, SQLite aggregations and the
+  incremental/full sync cursor logic ported from Python to Dart.
+- Android in-app WebView login with a native CookieManager bridge for the
+  HttpOnly session cookie, plus a manual "paste cookie" fallback.
+- Session cookies stored in Android Keystore-backed secure storage instead of
+  the SQLite database.
+- Added an extra `created_ms` column so date/hour bucketing does not depend on
+  SQLite's ISO-8601 timezone parsing.
+
+The MIT license text and the upstream copyright notice are preserved in the
+LICENSE file.
