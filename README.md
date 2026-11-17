@@ -43,13 +43,13 @@ This is a community-maintained Flutter/Android port of GoGauge, not an official 
 
 ## 安装
 
-直接安装构建好的 APK：
+仓库不提交 `build/` 产物；先从源码构建，APK 位于：
 
 ```
 build/app/outputs/flutter-apk/app-release.apk
 ```
 
-或使用 adb：
+或使用 adb 安装：
 
 ```bash
 adb install -r build/app/outputs/flutter-apk/app-release.apk
