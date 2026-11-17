@@ -1,8 +1,20 @@
 # GoGauge Mobile
 
+[![GitHub release](https://img.shields.io/github/v/release/StarryCognet/gogauge-mobile)](https://github.com/StarryCognet/gogauge-mobile/releases/latest)
+[![License: MIT](https://img.shields.io/github/license/StarryCognet/gogauge-mobile)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Android%207.0%2B-3DDC84?logo=android)](https://github.com/StarryCognet/gogauge-mobile/releases/latest)
+
 OpenCode Go 用量面板的 Android 独立版，移植自 [yphyphyph/opencode-go-gauge](https://github.com/yphyphyph/opencode-go-gauge)（Windows 桌面版，MIT 协议）。
 
 不依赖电脑：在 App 内登录 opencode.ai 后直接同步近 30 天用量明细，数据保存在手机本地 SQLite。桌面版保持原样，未做修改。
+
+## 下载
+
+- 最新版：[GitHub Releases](https://github.com/StarryCognet/gogauge-mobile/releases/latest)
+- v1.0.0 直链：[GoGauge-Mobile-v1.0.0.apk](https://github.com/StarryCognet/gogauge-mobile/releases/download/v1.0.0/GoGauge-Mobile-v1.0.0.apk)
+- SHA-256：`1d4b05a3de8850c1f144bcfcd78a46a296037c4048bf0aadb89263a759359991`
+
+> 当前 APK 使用 debug 签名，适合个人安装；上架或长期分发请配置 release keystore。
 
 ## 来源与声明 / Source & Attribution
 
@@ -43,19 +55,19 @@ This is a community-maintained Flutter/Android port of GoGauge, not an official 
 
 ## 安装
 
-仓库不提交 `build/` 产物；先从源码构建，APK 位于：
+从 [Releases](https://github.com/StarryCognet/gogauge-mobile/releases/latest) 下载 APK 后直接安装（需允许「安装未知来源应用」），或：
+
+```bash
+adb install -r GoGauge-Mobile-v1.0.0.apk
+```
+
+从源码构建时，产物位于：
 
 ```
 build/app/outputs/flutter-apk/app-release.apk
 ```
 
-或使用 adb 安装：
-
-```bash
-adb install -r build/app/outputs/flutter-apk/app-release.apk
-```
-
-要求：Android 7.0+（以合并后的 minSdk 为准），无需电脑常驻。
+要求：Android 7.0+（minSdk 24），无需电脑常驻。
 
 ## 登录
 
